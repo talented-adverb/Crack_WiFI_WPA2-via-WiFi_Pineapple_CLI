@@ -103,13 +103,6 @@ Look for **four EAPOL messages** exchanged between the client (station) and the 
 
 ![Setup](Images/wireshark.png)
 
-
-
-
-## ⚠ Legal Warning
-This script should **only** be used on networks you own or have **explicit permission** to test. Unauthorized use is a violation of **cybercrime laws**.
-
-
 ### 🔓 Cracking the WPA2 Handshake
 Once you have successfully captured the WPA2 handshake, you can attempt to crack the password using `aircrack-ng`.
 
@@ -132,6 +125,8 @@ If the password is in the wordlist, `aircrack-ng` will reveal it. If not, you ma
 
 ![Setup](Images/aircrack.png)
 
+## ⚠ Legal Warning
+This script should **only** be used on networks you own or have **explicit permission** to test. Unauthorized use is a violation of **cybercrime laws**.
 
 ---
 
