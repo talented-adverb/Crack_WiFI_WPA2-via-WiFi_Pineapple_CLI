@@ -11,7 +11,6 @@ My setup
 
 ### Terminal-1
   1. Detect your wireless network interface
-     Run:
 <pre lang="markdown">iwconfig</pre>
 ![Setup](Images/iwconfig.png)
 
