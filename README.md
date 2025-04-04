@@ -32,7 +32,25 @@ My setup
   5. Capture traffic 5GHz band
      <pre lang="markdown">airodump-ng &lt;interface&gt --channel 48</pre>
 
-  5. 
+### Terminal-2
+
+  6. select target and focus on one AP on channel:
+<pre lang="markdown">airodump-ng -c &lt;channel&gt; -w &lt;filename&gt; -d &lt;AP_BSSID&gt; &lt;interface&gt;</pre>
+
+### Example:
+
+<pre lang="markdown">airodump-ng -c2 -w capture_wpa2 -d 00:11:22:33:44:55 wlan3mon</pre>
+
+### Explanation:
+- **`-c 2`** → Specifies the Wi-Fi channel (replace with your target AP’s channel).
+- **`-w capture_wpa2`** → Defines the output filename (`capture_wpa2.cap`).
+- **`-d 00:11:22:33:44:55`** → Filters by target AP’s BSSID.
+- **`wlan3mon`** → Your network interface in monitor mode.
+
+Once executed, the `.cap` file will be created, which can be used for further analysis.
+
+  ![Setup](Images/airodump_target.png)
+
 
 
 <pre lang="markdown">
