@@ -29,7 +29,9 @@ My setup
 ![Setup](Images/enable_5g.png)
 
 
-  5. Capture traffic at 5GHz
+  5. Capture traffic 5GHz band
+     <pre lang="markdown">airodump-ng &lt;interface&gt --channel 48</pre>
+
   5. 
 
 
