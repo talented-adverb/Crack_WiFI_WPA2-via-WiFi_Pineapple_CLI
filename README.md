@@ -63,15 +63,71 @@ Once executed, the `.cap` file will be created, which can be used for further an
 
 
   8. Capture handshake : it will be shown in the monitor if captured ! at Terminal-2.
-     ![Setup](Images/captured_files.png)
+  ![Setup](Images/captured_files.png)
 
   9. Now you got the handshake(terminal-2)
   10. Stop the process at terminal-2:
       >ctrl+c
 
+### 🔍 Checking WPA2 Handshake in Wireshark
+Once the handshake is captured, follow these steps to verify it:
+
+#### Open the Captured File
+Run the following command to open the `.cap` file in Wireshark:
+
+```bash
+wireshark capture_wpa2-01.cap
+```
+
+#### Apply a Filter
+In Wireshark’s **filter bar**, enter the following filter and press **Enter**:
+
+```plaintext
+eapol
+```
+
+This filters out only **EAPOL (Extensible Authentication Protocol over LAN) packets**.
+
+#### Verify the 4-Way Handshake
+Look for **four EAPOL messages** exchanged between the client (station) and the AP (router):
+
+- **Message 1** → Sent by AP to the client.
+- **Message 2** → Client replies.
+- **Message 3** → AP sends another message.
+- **Message 4** → Final response from the client.
+
+#### Confirm Success
+
+- ✅ If **all 4 messages** are captured, you've successfully grabbed the handshake! 🎉
+- ❌ If you see only **2 or 3 messages**, the handshake is incomplete, and you may need to retry.
+
+![Setup](Images/wireshark.png)
 
 
 
+
+## ⚠ Legal Warning
+This script should **only** be used on networks you own or have **explicit permission** to test. Unauthorized use is a violation of **cybercrime laws**.
+
+
+### 🔓 Cracking the WPA2 Handshake
+Once you have successfully captured the WPA2 handshake, you can attempt to crack the password using `aircrack-ng`.
+
+#### Run the Following Command
+Use a wordlist to attempt the password crack:
+
+```bash
+aircrack-ng -w [wordlist.txt] -b [BSSID] capture_wpa2-01.cap
+```
+
+- `-w [wordlist.txt]`: Path to your dictionary file (e.g., `rockyou.txt`).
+- `-b [BSSID]`: The target network’s MAC address.
+- `capture_wpa2-01.cap`: The file containing the captured handshake.
+
+#### Wait for the Results
+If the password is in the wordlist, `aircrack-ng` will reveal it. If not, you may need a more extensive wordlist or other cracking techniques.
+
+---
 
 
 
