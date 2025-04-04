@@ -65,6 +65,11 @@ Once executed, the `.cap` file will be created, which can be used for further an
   8. Capture handshake : it will be shown in the monitor if captured ! at Terminal-2.
      ![Setup](Images/captured_files.png)
 
+  9. Now you got the handshake(terminal-2)
+  10. Stop the process at terminal-2:
+      >ctrl+c
+
+
 
 
 
