@@ -21,9 +21,13 @@ My setup
 
   3. Capture traffic
 <pre lang="markdown">airodump-ng &lt;interface&gt</pre>
+![Setup](Images/airodump.png)
+
 
   4. To set WiFi Pineapple at 5GHz Run:     
 <pre lang="markdown">airmon-ng &lt;interface&gt channel 48;</pre>
+![Setup](Images/enable_5g.png)
+
 
   5. Capture traffic at 5GHz
   5. 
