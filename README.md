@@ -58,6 +58,15 @@ Once executed, the `.cap` file will be created, which can be used for further an
 
   ![Setup](Images/deauth.png)
 
+  As the packets are sent frames on the target increase until it get's disconnected
+  ![Setup](Images/deauth_attack_in_progress.png)
+
+
+  8. Capture handshake : it will be shown in the monitor if captured ! at Terminal-2.
+     ![Setup](Images/captured_files.png)
+
+
+
 
 
 
