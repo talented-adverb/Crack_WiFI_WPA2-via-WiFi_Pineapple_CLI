@@ -6,7 +6,7 @@ Cracking WPA2 using Aircrack-ng through WiFi Pineapple MKVII CLI
 - Aircrack-ng : `sudo apt install aircrack-ng`
 - WiFi Pineapple MKVII (or any other WiFi Adapter. TIP:Whenever you’re choosing an external Wi-Fi adapter, make sure that it supports both 2.4Ghz and 5Ghz band.
 
-After the Setup
+My setup
 ![Setup](Images/Setup.jpg)
 
 ### Terminal-1
@@ -14,10 +14,19 @@ After the Setup
      Run:
 <pre lang="markdown">iwconfig</pre>
 ![Setup](Images/iwconfig.png)
+
   2. If interface not in monitor mode Run:
 <pre lang="markdown">airmon-ng start &lt;interface&gt;</pre>
-
 ![Setup](Images/start_Interface.png)
+
+  3. Capture traffic
+<pre lang="markdown">airodump-ng &lt;interface&gt</pre>
+
+  4. To set WiFi Pineapple at 5GHz Run:     
+<pre lang="markdown">airmon-ng &lt;interface&gt channel 48;</pre>
+
+  5. Capture traffic at 5GHz
+  5. 
 
 
 <pre lang="markdown">
