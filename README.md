@@ -14,6 +14,11 @@ After the Setup
      Run:
 <pre lang="markdown">iwconfig</pre>
 ![Setup](Images/iwconfig.png)
+  2. If interface not in monitor mode Run:
+<pre lang="markdown">airmon-ng start &lt;interface&gt;</pre>
+
+![Setup](Images/start_Interface.png)
+
 
 <pre lang="markdown">
 sudo apt install aircrack-ng hashcat -y
