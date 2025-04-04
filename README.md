@@ -33,7 +33,7 @@ My setup
 
 ### Terminal-2
 
-  6. select target and focus on one AP on channel:
+  6. select target and focus on one AP on a specific channel:
 <pre lang="markdown">airodump-ng -c &lt;channel&gt; -w &lt;filename&gt; -d &lt;AP_BSSID&gt; &lt;interface&gt;</pre>
 
 ### Example:
@@ -57,7 +57,7 @@ Once executed, the `.cap` file will be created, which can be used for further an
 
   ![Setup](Images/deauth.png)
 
-  As the packets are sent frames on the target increase until it get's disconnected
+As packets are sent, the number of captured frames from the target increases. This continues until the device eventually gets disconnected, allowing you to capture the WPA/WPA2 handshake.
   ![Setup](Images/deauth_attack_in_progress.png)
 
 
